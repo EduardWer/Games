@@ -1,4 +1,4 @@
-﻿
+
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization.Formatters;
 
@@ -101,14 +101,16 @@ class Games_1{
     }
 
     static void Main()
-    {
-        while (true)
-        {
+    {Boolean flag = true;
+        while (flag)
+            
+        {   
             Console.WriteLine();
             Console.WriteLine("Вы в главном меню выберите режим!");
             Console.WriteLine("1. Игра угадай число");
             Console.WriteLine("2. Таблица умножения");
             Console.WriteLine("3. Вывод делителей числа");
+            Console.WriteLine("4. Выход");
             Console.Write("Введите режим >>>");
             try
             {
@@ -126,6 +128,9 @@ class Games_1{
                     case 3:
                         num_detect();
                         break;
+                    case 4:
+                        flag = false;
+                        break; 
                 }
 
             }
