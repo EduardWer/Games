@@ -87,27 +87,26 @@ class Games_1{
         
         
     
-    static void Tabl_um()
-    {
-        string[,] tabl = new string[10,10];
-        for (int row = 0;row<= 10;row++)
-        {
-            for (int column = 0; column <= 10; column++)
-            {
-                tabl[row,column] = (row + "*" +  column + "=" + (row*column));
-            }
-            Console.WriteLine();
-        }
-        
-        for (int row = 0; row <= 10; row++)
-        {
-            for (int column = 0; column <= 10; column++)
-            {
-                Console.Write((tabl[row,column] + "\t");
-            }
-            Console.WriteLine();
-        }
-    }
+   static void Tabl_um()
+   {
+       int[,] table = new int[10, 10];
+       for (int row = 1; row < 10; ++row)
+       {
+           for (int column = 1; column < 10; ++column)
+           {
+               table[row, column] = row * column;
+           }
+       }
+
+       for (int row = 1; row < 10; ++row)
+       {
+           for (int column = 1; column < 10; ++column)
+           {
+               Console.Write(row +"*"+column+"="+table[row, column] + "\t");
+           }
+           Console.WriteLine();
+       }
+   }
 
     static void Main()
     {Boolean flag = true;
