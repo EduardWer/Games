@@ -94,7 +94,16 @@ class Games_1{
         {
             for (int column = 0; column <= 10; column++)
             {
-                Console.Write((column+"*"+row+"="+(column*row))+"\t");
+                tabl[row,column] = (row + "*" +  column + "=" + (row*column));
+            }
+            Console.WriteLine();
+        }
+        
+        for (int row = 0; row <= 10; row++)
+        {
+            for (int column = 0; column <= 10; column++)
+            {
+                Console.Write((tabl[row,column] + "\t");
             }
             Console.WriteLine();
         }
